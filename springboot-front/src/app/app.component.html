@@ -1,0 +1,23 @@
+<!-- <div class = "formularioRegistro";> -->
+    
+    <form [formGroup] = "quoteForm" (ngSubmit) = "guardar()" class = "formularioRegistro">
+        <h2>Crear cita</h2>
+        <div class = "form-group" formGroupName = "quoteForm" >
+            <label>Tema: </label>
+            <input type = "text" formControlName = "subject" class = "form-control">
+        </div>
+        <div class = "form-group" formGroupName = "quoteForm" >
+            <label>Cita: </label>
+            <input type = "text" formControlName = "quote" class = "form-control">
+        </div>
+        <div class = "form-group" formGroupName = "quoteForm" >
+            <label>Libro: </label>
+            <select name = "book" id = "book" formControlName = "books" class = "form-control">
+                <option value = "item-id" *ngFor = "let item of books"></option>
+            </select>
+        </div>
+        <button type = "submit" class = "btn btn-primary">Guardar</button>
+    </form>>
+<!-- </div> -->
+
+<router-outlet></router-outlet>
